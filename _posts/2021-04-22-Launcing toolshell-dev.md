@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Launcing toolshell.dev
+title: Launching toolshell.dev
 date: 2021-04-22 18:19
 category: k8s tools
 author: Anand Rao
