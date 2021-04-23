@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generate and use Wild card certs for K8s with Cert-Manager and Istio
+title: Generate and use Wild card certs for K8s with Cert-Manager
 date: 2021-04-22 20:19
 category: k8s
 author: 
@@ -10,7 +10,7 @@ tags:
  - wildcard Cert
  - Istio
  - Istio Gateway
-summary: Wild Card Certificates with Cert-Manager on K8s and Istio Gateway
+summary: Wild Card Certificates with Cert-Manager
 ---
 I love the simplicity that [Cert-Manager](https://cert-manager.io/docs/) brings to the certificate management for k8s. 
 - Install Cert-Manager
