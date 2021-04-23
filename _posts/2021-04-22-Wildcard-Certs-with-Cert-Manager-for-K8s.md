@@ -100,4 +100,8 @@ Its now time to create the certificate and see the magic happen.
 $ kapp deploy -a certs -f certificates.yml
 ```
 
+You can now provide the secret as the certificate store to any subdomain of the dnsName(s) that are included in the DNS Names list above. 
+
+Good luck securing  your apps ! 
+
 
