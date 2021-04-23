@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Generate and use Wild card certs for K8s with Cert-Manager and Istio
-date: 2020-07-13 00:23
+date: 2020-04-22 
 category: k8s
 author: 
 tags: 
