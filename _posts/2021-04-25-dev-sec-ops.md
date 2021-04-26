@@ -78,4 +78,4 @@ Lets run through a common set of pit stops that a DevSecOps flow or the journey 
 
 If I ask you, which part of the above key steps is it ok to skip ? My assumption is that you will say none. very step is important to make sure the key asks of security, speed, consistency and scale are taken care on every step on the workflow to fully operationalize a container platform like kubernetes. I will double click on these steps and talk about the details on each of those on the subsequent posts on this series. Until then I leave you with this picture ! 
 
-<img src="/images/Fullpicture.png" width="1000" height="800" />
+<img src="/images/Fullpicture.png" width="1000" height="1000" />
