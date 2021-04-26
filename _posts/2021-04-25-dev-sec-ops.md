@@ -48,7 +48,7 @@ Lets run through a common set of pit stops that a ***DevSecOps*** flow or the jo
 
 
 1. **The Image Registry**
-<img src="/images/Registry.png" width="350" height="175" />
+<img src="/images/registry1.png" width="350" height="175" />
 
     The docker or oci image registry is a repository for storing OCI images. The registries have become increasingly sophisticated as they build towards scale, security, consistency and enterprise readiness. One such registry is [Harbor](https://goharbor.io/) which is an open source project under CNCF as well. Harbor has a few very strong enterprise ready features like automatic image scanning for vulnerabilities and control of consumption of images from clusters based on the level and number of vulnerabilities found by the scans. Harbor also allows for image signing to help avoid man in the middle attacks. Harbor has a good RBAC system to allow for user access controls along with support for a Helm repository. Having said that,  docker hub ,  GCR, ACR  and ECR are also very popular docker registries. 
 
