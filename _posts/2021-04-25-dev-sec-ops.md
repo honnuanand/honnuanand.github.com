@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 
+title: DevSecOps and Operationalizing Kubernetes
 date: 2021-04-25 16:26
-category: 
-author: 
+category: k8s
+author: Anand Rao
 tags: 
-    - DevSecOps
-    - k8s
-    - cloudnative
+ - DevSecOps
+ - k8s
+ - cloudnative
 summary: The DevSecOps Flow in the Cloud Native World
 ---
 <img src="/images/sec-into-devops.jpg" width="350" height="175" />

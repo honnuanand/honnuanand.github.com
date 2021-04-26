@@ -3,7 +3,7 @@ layout: post
 title: Generate and use Wild card certs for K8s with Cert-Manager
 date: 2021-04-22 20:19
 category: k8s
-author: 
+author: Anand Rao
 tags: 
  - k8s
  - Cert-Manager
