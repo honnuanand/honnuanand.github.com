@@ -73,7 +73,7 @@ Lets run through a common set of pit stops that a ***DevSecOps*** flow or the jo
     The Service Mesh secton of the industry has a good few players and options for the consumers. I will detail that in a subsequent blog post. 
 
 1. **Cluster and application management at Scale** 
-<img src="/images/Management.png" width="500" height="200" />
+<img src="/images/Management.png" width="600" height="200" />
 
     Another major change in the paradigm when it comes to managing Kubernetes clusters is that gone are those days when we just had a handful or more clusters. In todays world,  we see a lot more scenarios and use-cases where the usage is leaning more towards many small size clusters than a smaller set of large scale clusters. This puts a lot of pressure on Operations teams that are managing these clusters. We have no choice but to start seeing clusters are cattle than pets. Treating them as cattle is easy when you have centralized management of these clusters using one or a small set of policies that are applied on all the clusters. 
 
