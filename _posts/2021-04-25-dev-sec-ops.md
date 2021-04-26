@@ -4,24 +4,27 @@ title:
 date: 2021-04-25 16:26
 category: 
 author: 
-tags: []
+tags: 
+    - DevSecOps
+    - k8s
+    - cloudnative
 summary: The DevSecOps Flow in the Cloud Native World
 ---
 <img src="/images/sec-into-devops.jpg" width="350" height="175" />
 Containers and specifically Kubernetes is abuzz in the world of cloud technology. This has led to a tremendous rush to adopt kubernetes and rightfully so. Having said that, much too often you are in a state where one can ask you, you just installed/provisioned Kubernetes - "Now what ?? ". The Challenge of operationalizing kubernetes is not small. There is a lot that goes into making kubernetes useful for developers and operators alike.
 
-***DevSecOps***, We have heard this phrase quite a bit lately. I will attempt to explain what that means to me and kick off a series of blog posts to walk through the workflow. Lets try to paint a picture of the current software development and deployment. To develop, build , deploy and manage software that has multiple constraints, there has been a constant evolution. The DevOps model or the flow has been adopted by the cloud native software industry. The key tenets of devops has been the automation of the key tasks of the work flow that the use of a CI/CD process. The distributed and the exploded scale has brought a big emphasis on security to be a core part of this DevOps flow that brings us to the new mantra in the cloud native world called the Dev-Sec-Ops Flow.
+***DevSecOps***, We have heard this phrase quite a bit lately. I will attempt to explain what that means to me and kick off a series of blog posts to walk through the workflow. Lets try to paint a picture of the current software development and deployment. To develop, build , deploy and manage software that has multiple constraints, there has been a constant evolution. The DevOps model or the flow has been adopted by the cloud native software industry. The key tenets of devops has been the automation of the key tasks of the work flow that the use of a CI/CD process. The distributed and the exploded scale has brought a big emphasis on security to be a core part of this DevOps flow that brings us to the new mantra in the cloud native world called the ***DevSecOps*** Flow.
 
 <img src="/images/ThedevsecOpsAsk.jpg" width="250" height="500" />
 
 The Development teams and Designers in the current cloud native and mostly distributed world are imposed with multiple implicit asks for any new software thats being developed. 
 Build software that is 
-1. Secure by default
-1. Can scale at ease to the needs of the distributed user base
-1. Allows users to use it consistently
-1. Highly available
+1. **Secure** by default
+1. Can **scale** at ease to the needs of the distributed user base
+1. Allows users to use it **consistently**
+1. **Highly available**
 
-Lets run through a common set of pit stops that a DevSecOps flow or the journey takes for an Idea to reach the hands of a user. 
+Lets run through a common set of pit stops that a ***DevSecOps*** flow or the journey takes for an Idea to reach the hands of a user. 
 
 1. **The Ideation and Development**
 <img src="/images/development.jpg" width="300" height="500" />
@@ -39,7 +42,7 @@ Lets run through a common set of pit stops that a DevSecOps flow or the journey 
 1. **Source to Image packaging**
 <img src="/images/src-to-image.png" width="350" height="175" />
 
-    This is the phase when we need to find an efficient process which are bound by the key guard rails from above. Being able to build a process that can build an image which is secure and the images produced are reproducible are top needs here. The latest OCI image formats allow for a lot of efficiencies when comes to building of the images. With the layered model where is layer can be a reference to a separate repository, changes can now be granular. What that means is that now,  we can just change the one layer than has changed and not have to touch any other layers.  The systems can cache the previous layers and reuse them making the image build process extremely fast. The Cloud Native Buildpacks system developed by VMware in partnership with Heroku under the Cloud Native Computing Foundation (CNCF) is an image build process that allows you to build an application's docker image with the developer bringing just the source code. This was the technology that was originally built by the Cloud Foundry PaaS system. The kpack project has all the scaffolding needed to automate this the build process using the buildpacks being triggered by changes in the source code or the other key components needed for the image. These other components include the buildpacks, the base images used for run and build. The images built out of this system are consistent as in reproducible,  secure to the extent that the layers brought in by the platform are updated. This allows for most of the key layers coming from the same set or a small set of images. 
+    This is the phase when we need to find an efficient process which are bound by the key guard rails from above. Being able to build a process that can build an image which is secure and the images produced are reproducible are top needs here. The latest OCI image formats allow for a lot of efficiencies when comes to building of the images. With the layered model where is layer can be a reference to a separate repository, changes can now be granular. What that means is that now,  we can just change the one layer than has changed and not have to touch any other layers.  The systems can cache the previous layers and reuse them making the image build process extremely fast. The [Cloud Native Buildpacks](http://buildpacks.io) system developed by VMware in partnership with Heroku under the [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF) is an image build process that allows you to build an application's docker image with the developer bringing just the source code. This was the technology that was originally built by the Cloud Foundry PaaS system. The kpack project has all the scaffolding needed to automate this the build process using the buildpacks being triggered by changes in the source code or the other key components needed for the image. These other components include the buildpacks, the base images used for run and build. The images built out of this system are consistent as in reproducible,  secure to the extent that the layers brought in by the platform are updated. This allows for most of the key layers coming from the same set or a small set of images. 
 
     This allows updates to the images to be very efficient and fast. The process to identify the impacted application images when you have to change some thing like a base image or the buildpack image is very easy as it can be traced back to a small or a single set. This also allows for a very efficient and simpler inventory or Bill of materials management. 
 
@@ -47,7 +50,7 @@ Lets run through a common set of pit stops that a DevSecOps flow or the journey 
 1. **The Image Registry**
 <img src="/images/registry.png" width="350" height="175" />
 
-    The docker or oci image registry is a repository for storing OCI images. The registries have become increasingly sophisticated as they build towards scale, security, consistency and enterprise readiness. One such registry is Harbor which is an open source project under CNCF as well. Harbor has a few very strong enterprise ready features like automatic image scanning for vulnerabilities and control of consumption of images from clusters based on the level and number of vulnerabilities found by the scans. Harbor also allows for image signing to help avoid man in the middle attacks. Harbor has a good RBAC system to allow for user access controls along with support for a Helm repository. Having said that,  docker hub ,  GCR, ACR  and ECR are also very popular docker registries. 
+    The docker or oci image registry is a repository for storing OCI images. The registries have become increasingly sophisticated as they build towards scale, security, consistency and enterprise readiness. One such registry is [Harbor](https://goharbor.io/) which is an open source project under CNCF as well. Harbor has a few very strong enterprise ready features like automatic image scanning for vulnerabilities and control of consumption of images from clusters based on the level and number of vulnerabilities found by the scans. Harbor also allows for image signing to help avoid man in the middle attacks. Harbor has a good RBAC system to allow for user access controls along with support for a Helm repository. Having said that,  docker hub ,  GCR, ACR  and ECR are also very popular docker registries. 
 
 1. **Third party and OSS apps/services** 
 <img src="/images/Catalog.png" width="350" height="175" />
