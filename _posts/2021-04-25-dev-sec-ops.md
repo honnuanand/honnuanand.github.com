@@ -72,3 +72,9 @@ Lets run through a common set of pit stops that a DevSecOps flow or the journey 
 <img src="/images/Observability.png" width="400" height="200" />
  
    Monitoring and Observability is a big ask when it comes to building applications and clusters. In the current cloud native world,  there is a lot of the management and monitoring that is based on the SRE principles that uses a lot of the SLO / SLA based management. Having a pure cloud native observability tool like Tanzu observability helps have a good view into your entire set workloads. 
+
+### Putting it all together
+
+If I ask you, which part of the above key steps is it ok to skip ? My assumption is that you will say none. very step is important to make sure the key asks of security, speed, consistency and scale are taken care on every step on the workflow to fully operationalize a container platform like kubernetes. I will double click on these steps and talk about the details on each of those on the subsequent posts on this series. 
+
+<img src="/images/Fullpicture.png" width="800" height="600" />
